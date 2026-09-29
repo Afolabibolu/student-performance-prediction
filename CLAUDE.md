@@ -8,7 +8,7 @@ test-set macro-F1.
 ## Commands
 
 ```bash
-.venv/bin/python -m src.train                          # train + write artifacts/ (~40 s)
+.venv/bin/python -m src.train                          # train + write artifacts/ (~20-40 s)
 .venv/bin/python scripts/generate_report_assets.py     # figures -> assets/
 .venv/bin/streamlit run app.py                         # dashboard + predictor
 .venv/bin/pytest                                       # tests (fast)
@@ -36,4 +36,5 @@ test-set macro-F1.
   `artifacts/{stage}/{model}.joblib` plus `artifacts/metrics.json`
 - `src/plots.py`: all figures (used by `scripts/` and `app.py`)
 - `src/codebook.py`: integer code -> label maps from the UCI data dictionary (app form only)
-- `artifacts/` is gitignored; `assets/` is committed.
+- `artifacts/` and `assets/` are both committed. The trained models ship with the repo so the
+  deployed app loads them instead of training; after retraining, commit the new artifacts.

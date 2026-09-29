@@ -1,0 +1,479 @@
+{
+  "n_train": 3539,
+  "n_test": 885,
+  "class_counts": {
+    "Dropout": 1421,
+    "Enrolled": 794,
+    "Graduate": 2209
+  },
+  "stages": {
+    "enrollment": {
+      "label": "Enrollment-only",
+      "features": [
+        "Marital status",
+        "Application mode",
+        "Application order",
+        "Course",
+        "Daytime/evening attendance",
+        "Previous qualification",
+        "Previous qualification (grade)",
+        "Nacionality",
+        "Mother's qualification",
+        "Father's qualification",
+        "Mother's occupation",
+        "Father's occupation",
+        "Admission grade",
+        "Displaced",
+        "Educational special needs",
+        "Debtor",
+        "Tuition fees up to date",
+        "Gender",
+        "Scholarship holder",
+        "Age at enrollment",
+        "International",
+        "Unemployment rate",
+        "Inflation rate",
+        "GDP"
+      ],
+      "models": {
+        "Logistic Regression": {
+          "accuracy": 0.5740112994350283,
+          "macro_f1": 0.5508546371888304,
+          "per_class": {
+            "Dropout": {
+              "precision": 0.6875,
+              "recall": 0.5809859154929577,
+              "f1-score": 0.6297709923664122,
+              "support": 284.0
+            },
+            "Enrolled": {
+              "precision": 0.3007246376811594,
+              "recall": 0.5220125786163522,
+              "f1-score": 0.3816091954022988,
+              "support": 159.0
+            },
+            "Graduate": {
+              "precision": 0.7046070460704607,
+              "recall": 0.5882352941176471,
+              "f1-score": 0.6411837237977805,
+              "support": 442.0
+            }
+          },
+          "confusion_matrix": [
+            [
+              165,
+              66,
+              53
+            ],
+            [
+              20,
+              83,
+              56
+            ],
+            [
+              55,
+              127,
+              260
+            ]
+          ]
+        },
+        "Decision Tree": {
+          "accuracy": 0.49491525423728816,
+          "macro_f1": 0.4985639307207584,
+          "per_class": {
+            "Dropout": {
+              "precision": 0.7298850574712644,
+              "recall": 0.4471830985915493,
+              "f1-score": 0.554585152838428,
+              "support": 284.0
+            },
+            "Enrolled": {
+              "precision": 0.2574468085106383,
+              "recall": 0.7610062893081762,
+              "f1-score": 0.3847376788553259,
+              "support": 159.0
+            },
+            "Graduate": {
+              "precision": 0.7883817427385892,
+              "recall": 0.4298642533936652,
+              "f1-score": 0.5563689604685212,
+              "support": 442.0
+            }
+          },
+          "confusion_matrix": [
+            [
+              127,
+              133,
+              24
+            ],
+            [
+              11,
+              121,
+              27
+            ],
+            [
+              36,
+              216,
+              190
+            ]
+          ]
+        },
+        "Random Forest": {
+          "accuracy": 0.6406779661016949,
+          "macro_f1": 0.5208123838241216,
+          "per_class": {
+            "Dropout": {
+              "precision": 0.6577946768060836,
+              "recall": 0.6091549295774648,
+              "f1-score": 0.6325411334552102,
+              "support": 284.0
+            },
+            "Enrolled": {
+              "precision": 0.43478260869565216,
+              "recall": 0.12578616352201258,
+              "f1-score": 0.19512195121951217,
+              "support": 159.0
+            },
+            "Graduate": {
+              "precision": 0.6493055555555556,
+              "recall": 0.8461538461538461,
+              "f1-score": 0.7347740667976426,
+              "support": 442.0
+            }
+          },
+          "confusion_matrix": [
+            [
+              173,
+              12,
+              99
+            ],
+            [
+              36,
+              20,
+              103
+            ],
+            [
+              54,
+              14,
+              374
+            ]
+          ]
+        },
+        "Gradient Boosting": {
+          "accuracy": 0.5875706214689266,
+          "macro_f1": 0.5338587514349777,
+          "per_class": {
+            "Dropout": {
+              "precision": 0.6167883211678832,
+              "recall": 0.5950704225352113,
+              "f1-score": 0.6057347670250895,
+              "support": 284.0
+            },
+            "Enrolled": {
+              "precision": 0.2994350282485876,
+              "recall": 0.3333333333333333,
+              "f1-score": 0.3154761904761905,
+              "support": 159.0
+            },
+            "Graduate": {
+              "precision": 0.6866359447004609,
+              "recall": 0.6742081447963801,
+              "f1-score": 0.680365296803653,
+              "support": 442.0
+            }
+          },
+          "confusion_matrix": [
+            [
+              169,
+              47,
+              68
+            ],
+            [
+              38,
+              53,
+              68
+            ],
+            [
+              67,
+              77,
+              298
+            ]
+          ]
+        }
+      },
+      "feature_importance": {
+        "Course": 0.1020674004991458,
+        "Father's occupation": 0.0882700164535499,
+        "Mother's occupation": 0.07579457836692025,
+        "Admission grade": 0.0666868447506379,
+        "Mother's qualification": 0.06556256863307104,
+        "Father's qualification": 0.06355831632153137,
+        "Previous qualification (grade)": 0.06125159752162308,
+        "Application mode": 0.06035781076932446,
+        "Tuition fees up to date": 0.05959064594167696,
+        "Age at enrollment": 0.057204957108120506,
+        "GDP": 0.04103671215352355,
+        "Unemployment rate": 0.04000983240228651,
+        "Inflation rate": 0.03669962338432865,
+        "Scholarship holder": 0.03557597131665108,
+        "Displaced": 0.024262723174354003,
+        "Application order": 0.0242080480659356,
+        "Gender": 0.023877601078347847,
+        "Previous qualification": 0.02193546623114567,
+        "Debtor": 0.018643053806263233,
+        "Marital status": 0.013149607496220824,
+        "Daytime/evening attendance": 0.009033299313302053,
+        "Nacionality": 0.004355823537926276,
+        "International": 0.0038794554223016294,
+        "Educational special needs": 0.0029880462518118356
+      },
+      "best_model": "Logistic Regression"
+    },
+    "full": {
+      "label": "Full (with semester results)",
+      "features": [
+        "Marital status",
+        "Application mode",
+        "Application order",
+        "Course",
+        "Daytime/evening attendance",
+        "Previous qualification",
+        "Previous qualification (grade)",
+        "Nacionality",
+        "Mother's qualification",
+        "Father's qualification",
+        "Mother's occupation",
+        "Father's occupation",
+        "Admission grade",
+        "Displaced",
+        "Educational special needs",
+        "Debtor",
+        "Tuition fees up to date",
+        "Gender",
+        "Scholarship holder",
+        "Age at enrollment",
+        "International",
+        "Curricular units 1st sem (credited)",
+        "Curricular units 1st sem (enrolled)",
+        "Curricular units 1st sem (evaluations)",
+        "Curricular units 1st sem (approved)",
+        "Curricular units 1st sem (grade)",
+        "Curricular units 1st sem (without evaluations)",
+        "Curricular units 2nd sem (credited)",
+        "Curricular units 2nd sem (enrolled)",
+        "Curricular units 2nd sem (evaluations)",
+        "Curricular units 2nd sem (approved)",
+        "Curricular units 2nd sem (grade)",
+        "Curricular units 2nd sem (without evaluations)",
+        "Unemployment rate",
+        "Inflation rate",
+        "GDP"
+      ],
+      "models": {
+        "Logistic Regression": {
+          "accuracy": 0.7254237288135593,
+          "macro_f1": 0.6885166571592931,
+          "per_class": {
+            "Dropout": {
+              "precision": 0.8177966101694916,
+              "recall": 0.6795774647887324,
+              "f1-score": 0.7423076923076923,
+              "support": 284.0
+            },
+            "Enrolled": {
+              "precision": 0.4156378600823045,
+              "recall": 0.6352201257861635,
+              "f1-score": 0.5024875621890548,
+              "support": 159.0
+            },
+            "Graduate": {
+              "precision": 0.8571428571428571,
+              "recall": 0.7873303167420814,
+              "f1-score": 0.820754716981132,
+              "support": 442.0
+            }
+          },
+          "confusion_matrix": [
+            [
+              193,
+              65,
+              26
+            ],
+            [
+              26,
+              101,
+              32
+            ],
+            [
+              17,
+              77,
+              348
+            ]
+          ]
+        },
+        "Decision Tree": {
+          "accuracy": 0.6474576271186441,
+          "macro_f1": 0.6303623404507039,
+          "per_class": {
+            "Dropout": {
+              "precision": 0.8027522935779816,
+              "recall": 0.6161971830985915,
+              "f1-score": 0.697211155378486,
+              "support": 284.0
+            },
+            "Enrolled": {
+              "precision": 0.34036144578313254,
+              "recall": 0.710691823899371,
+              "f1-score": 0.4602851323828921,
+              "support": 159.0
+            },
+            "Graduate": {
+              "precision": 0.8507462686567164,
+              "recall": 0.6447963800904978,
+              "f1-score": 0.7335907335907337,
+              "support": 442.0
+            }
+          },
+          "confusion_matrix": [
+            [
+              175,
+              85,
+              24
+            ],
+            [
+              20,
+              113,
+              26
+            ],
+            [
+              23,
+              134,
+              285
+            ]
+          ]
+        },
+        "Random Forest": {
+          "accuracy": 0.7638418079096045,
+          "macro_f1": 0.6724256996330246,
+          "per_class": {
+            "Dropout": {
+              "precision": 0.8007380073800738,
+              "recall": 0.7640845070422535,
+              "f1-score": 0.7819819819819819,
+              "support": 284.0
+            },
+            "Enrolled": {
+              "precision": 0.5662650602409639,
+              "recall": 0.29559748427672955,
+              "f1-score": 0.3884297520661157,
+              "support": 159.0
+            },
+            "Graduate": {
+              "precision": 0.775894538606403,
+              "recall": 0.9321266968325792,
+              "f1-score": 0.8468653648509764,
+              "support": 442.0
+            }
+          },
+          "confusion_matrix": [
+            [
+              217,
+              19,
+              48
+            ],
+            [
+              41,
+              47,
+              71
+            ],
+            [
+              13,
+              17,
+              412
+            ]
+          ]
+        },
+        "Gradient Boosting": {
+          "accuracy": 0.7344632768361582,
+          "macro_f1": 0.6754212453850504,
+          "per_class": {
+            "Dropout": {
+              "precision": 0.7727272727272727,
+              "recall": 0.7183098591549296,
+              "f1-score": 0.7445255474452555,
+              "support": 284.0
+            },
+            "Enrolled": {
+              "precision": 0.4277456647398844,
+              "recall": 0.46540880503144655,
+              "f1-score": 0.44578313253012053,
+              "support": 159.0
+            },
+            "Graduate": {
+              "precision": 0.8303571428571429,
+              "recall": 0.8416289592760181,
+              "f1-score": 0.8359550561797754,
+              "support": 442.0
+            }
+          },
+          "confusion_matrix": [
+            [
+              204,
+              50,
+              30
+            ],
+            [
+              39,
+              74,
+              46
+            ],
+            [
+              21,
+              49,
+              372
+            ]
+          ]
+        }
+      },
+      "feature_importance": {
+        "Curricular units 2nd sem (approved)": 0.08836716859826206,
+        "Curricular units 2nd sem (grade)": 0.07604429631778713,
+        "Curricular units 1st sem (approved)": 0.0583239548274304,
+        "Curricular units 1st sem (grade)": 0.0579117219234633,
+        "Course": 0.05270910832718775,
+        "Father's occupation": 0.04881910111953075,
+        "Tuition fees up to date": 0.043728750998126745,
+        "Mother's occupation": 0.04285420952736708,
+        "Curricular units 2nd sem (evaluations)": 0.04122731483143969,
+        "Curricular units 1st sem (evaluations)": 0.03760927825804609,
+        "Mother's qualification": 0.03731637955603211,
+        "Father's qualification": 0.03700489125889496,
+        "Application mode": 0.03641231090461219,
+        "Admission grade": 0.0363954302183082,
+        "Previous qualification (grade)": 0.03374013759455018,
+        "Age at enrollment": 0.03327667353390509,
+        "Scholarship holder": 0.022899297119305474,
+        "GDP": 0.022837413336966574,
+        "Unemployment rate": 0.02233224458331713,
+        "Inflation rate": 0.02123961207222347,
+        "Curricular units 2nd sem (enrolled)": 0.019607291705256776,
+        "Curricular units 1st sem (enrolled)": 0.017256728121507536,
+        "Gender": 0.016007399389042904,
+        "Displaced": 0.014414552748304459,
+        "Debtor": 0.014332172296133223,
+        "Application order": 0.01368357861159488,
+        "Previous qualification": 0.012043834111871838,
+        "Marital status": 0.007579505155617559,
+        "Curricular units 1st sem (credited)": 0.006468322454980695,
+        "Curricular units 2nd sem (credited)": 0.00600020260027678,
+        "Daytime/evening attendance": 0.0055285195289556215,
+        "Curricular units 1st sem (without evaluations)": 0.005162300008509468,
+        "Curricular units 2nd sem (without evaluations)": 0.004592994353968758,
+        "Nacionality": 0.002654149574784296,
+        "International": 0.002105611850261992,
+        "Educational special needs": 0.001513542582176972
+      },
+      "best_model": "Logistic Regression"
+    }
+  }
+}

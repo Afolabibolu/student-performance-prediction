@@ -62,7 +62,7 @@ src/codebook.py                readable labels for the dataset's integer codes
 scripts/generate_report_assets.py   regenerates the figures in assets/
 app.py                         Streamlit dashboard and live predictor
 tests/                         pytest tests
-artifacts/                     fitted pipelines + metrics.json (generated, not committed)
+artifacts/                     trained models (compressed) + metrics.json, committed so the app loads instantly
 assets/                        README figures (committed)
 ```
 
@@ -78,7 +78,7 @@ source .venv/bin/activate
 pip install -r requirements.txt        # or requirements-dev.txt for pytest + ruff
 ```
 
-Train all models on both stages. This prints the results table and writes `artifacts/`, and takes about 40 seconds:
+Train all models on both stages. This prints the results table and writes `artifacts/`, and takes 20 to 40 seconds. The trained models are already included in the repo, so you only need this after changing the code:
 
 ```bash
 python -m src.train
@@ -90,7 +90,7 @@ Regenerate the README figures in `assets/`. This trains first if `artifacts/` is
 python scripts/generate_report_assets.py
 ```
 
-Run the app. It trains on first run if `artifacts/` is missing:
+Run the app. It loads the saved models from `artifacts/` (and trains them itself only if that folder is missing):
 
 ```bash
 streamlit run app.py
